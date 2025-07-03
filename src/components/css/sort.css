@@ -1,0 +1,48 @@
+.sort{
+    margin: 15px 15px 22px 30px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(0, 242, 250, 0.5);
+    box-shadow: 0 0 5px rgba(0, 242, 250, 0.5);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 6px 7px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.h{
+    max-height: 69px;
+}
+
+.mr{
+    margin-right: 2px;
+}
+
+.ml{
+    margin-left: 10px;
+}
+
+.sorts{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 242, 250, 0.5);
+    width: 5rem;
+    position: relative;
+    top: -15px;
+    left: 35px;
+}
+
+.sort-btn{
+    background-color: rgb(0, 131, 136);
+    color: #fff;
+    border: none;
+    height: 2rem;
+    width: 5rem;
+    cursor: pointer;
+}
+
+.sort-btn:hover{
+    background-color: rgb(0, 155, 160);
+}
