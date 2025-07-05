@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './css/sort.css'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import { BiSort } from 'react-icons/bi'
-import { sortPropType } from '../Types'
+import type { sortPropType } from '../Types'
 
 const Sort = ({sortProjects}: sortPropType) => {
     const [showSorts, setShowSorts] = useState<boolean>(false)

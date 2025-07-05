@@ -3,7 +3,7 @@ import './css/sort.css'
 import './css/filter.css'
 import { BiFilter } from 'react-icons/bi'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
-import { filterPropType } from '../Types'
+import type { filterPropType } from '../Types'
 
 const Filter = ({filterProjects}:filterPropType) => {
 

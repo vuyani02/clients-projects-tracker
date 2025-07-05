@@ -1,7 +1,7 @@
 import './css/table.css'
 import { BsThreeDots } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react';
-import { clientDataType, clientsDataType } from '../Types';
+import type {clientDataType} from '../Types';
 
 const Table = ({data, setData, pageNumber}: clientsDataType) => {
 
