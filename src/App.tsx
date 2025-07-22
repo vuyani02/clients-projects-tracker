@@ -8,7 +8,6 @@ import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import type { clientDataType } from './Types'
 
-
 const Master = () => {
     
     const [projects, setProjects] = useState<clientDataType[]>(data);

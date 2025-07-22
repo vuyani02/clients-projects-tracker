@@ -1,27 +1,27 @@
 import './css/table.css'
 import { BsThreeDots } from 'react-icons/bs'
 import { useEffect, useRef, useState } from 'react';
-import type {clientDataType} from '../Types';
+import type {clientDataType, clientsDataType} from '../Types';
 
 const Table = ({data, setData, pageNumber}: clientsDataType) => {
 
     const [statusActionVisible, setStatusActionVisible] = useState<number | null>(null);
-    const inputRef = useRef(null);
+    const inputRef = useRef<HTMLInputElement>(null);
     
     
     const projectsPerPage: number = 5;
     let currentPage: clientDataType[]
 
     if(pageNumber === 1){
-        currentPage = data.filter((dataEl, i) => i < projectsPerPage);
+        currentPage = data.filter((_dataEl, i) => i < projectsPerPage);
     }
 
     else if(pageNumber === 2){
-        currentPage = data.filter((dataEl, i) => i >= projectsPerPage && i < 10);
+        currentPage = data.filter((_dataEl, i) => i >= projectsPerPage && i < 10);
     }
 
     else{
-        currentPage = data.filter((dataEl, i) => i >= 10);
+        currentPage = data.filter((_dataEl, i) => i >= 10);
     }
 
     
@@ -29,7 +29,7 @@ const Table = ({data, setData, pageNumber}: clientsDataType) => {
     const isCompleted = () => {
         document.querySelectorAll('.iscompleted').forEach( div =>{
             div.classList.remove('completed');
-            div.dataset.progress === '100%' && div.classList.add('completed');
+            (div as HTMLElement).dataset.progress === '100%' && div.classList.add('completed');
         });
     };
 
@@ -43,7 +43,6 @@ const Table = ({data, setData, pageNumber}: clientsDataType) => {
         if(!inputValue.includes("%")){
             inputValue += "%";
         }
-        console.log(i);
         setData(prev => prev.map((dataEl, index) =>{
 
             if(inputValue === '100%'){
