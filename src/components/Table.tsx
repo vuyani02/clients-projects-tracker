@@ -92,7 +92,7 @@ const Table = ({data, setData, pageNumber}: clientsDataType) => {
                 {currentPage!.map((d, i) => (
                     <tr key={i}>
                         <td className='row-b-d img-block'>
-                            <img className='img' src={d.image} alt={d.client} />
+                            <img className='img' src={"/clients-projects-tracker/" + d.image} alt={d.client} />
                         </td>
                         <td className='row-b-d'>{d.client}</td>
                         <td className='row-b-d'>{d.country}</td>
